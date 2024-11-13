@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Birthday Message</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.4;
+            padding: 12px;
+            max-width: 100%;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Chat Styles */
+        .header {
+            text-align: center;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid #e1e1e1;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .contact-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #000000;
+        }
+
+        .chat-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0;
+            gap: 8px;
+        }
+
+        .message {
+            max-width: 70%;
+            padding: 8px 14px;
+            border-radius: 18px;
+            font-size: 16px;
+            margin: 4px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideIn 0.3s forwards;
+        }
+
+        .message.received {
+            background-color: #e9e9eb;
+            color: #000000;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+        }
+
+        .message.sent {
+            background-color: #007aff;
+            color: #ffffff;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+
+        .typing-indicator {
+            display: none;
+            align-self: flex-start;
+            background-color: #e9e9eb;
+            padding: 12px 18px;
+            border-radius: 18px;
+            border-bottom-left-radius: 5px;
+            margin: 4px 0;
+        }
+
+        .time {
+            font-size: 11px;
+            color: #8e8e93;
+            margin-top: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="contact-name">❤️ Láska ❤️</div>
+    </div>
+
+    <div class="chat-container">
+        <!-- Messages will be inserted here by JavaScript -->
+    </div>
+
+    <div class="typing-indicator">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Envelope Container (initially hidden) -->
+    <div id="envelope-container" style="display: none;">
+        <div class="envlope-wrapper">
+            <div id="envelope" class="close">
+                <div class="front flap"></div>
+                <div class="front pocket"></div>
+                <div class="letter">
+                    <div class="words line1"></div>
+                    <div class="words line2"></div>
+                    <div class="words line3"></div>
+                    <div class="words line4"></div>
+                </div>
+                <div class="hearts">
+                    <div class="heart a1"></div>
+                    <div class="heart a2"></div>
+                    <div class="heart a3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="reset">
+            <button id="open">Open</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+    <div id="birthday-card">
+        <button id="close-card">×</button>
+        <h1>Všetko najlepšie k narodeninám! 🎉</h1>
+        <p>Prajem Ti veľa šťastia, zdravia a lásky v ďalšom roku života! 🎂✨</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</body>
+</html>
