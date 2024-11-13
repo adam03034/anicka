@@ -1,12 +1,12 @@
 
     // Chat Messages Configuration
     const messages = [
-        { text: "Hey láska 😊", type: "sent", delay: 1000 },
-        { text: "Mám pre teba prekvapenie... 🎁", type: "sent", delay: 2000 },
-        { text: "Vieš aký je dnes deň? 😊", type: "sent", delay: 3000 },
-        { text: "Je to tvoj špeciálny deň... 🌟", type: "sent", delay: 4000 },
+        { text: "Ahoj Anicka!", type: "sent", delay: 1000 },
+        { text: "Mám pre teba prekvapko :D", type: "sent", delay: 2000 },
+        { text: "Vieš aký je dnes deň?!", type: "sent", delay: 3000 },
+        { text: "Je to tvoj špeciálny deň ;)", type: "sent", delay: 4000 },
         { text: "Všetko najlepšie k narodeninám! 🎉🎂", type: "sent", delay: 5000 },
-        { text: "❤️❤️❤️", type: "sent", delay: 6000 },
+        { text: "❤️", type: "sent", delay: 6000 },
         { text: "Klikni sem pre svoje prekvapenie... 🎁✨", type: "sent", delay: 7000, special: true }
     ];
 
